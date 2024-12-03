@@ -62,6 +62,7 @@
                                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Simpan
                                 </a>
+                                <button class="btn btn-primary btn-user btn-block">Cek Riwayat Kunjungan</button>
                                 
                             </form>
                             <hr>
@@ -107,6 +108,62 @@
                         </tr>
                     </table>
                 </div>
+            </div>
+        </div>
+        <!-- end col-lg-5 -->
+    </div>
+    <!-- end row -->
+
+    <!-- card -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary text-center">Data Kunjungan</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                        </tr>
+                    </thead>
+                    {{--<tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                        </tr>
+                    </tfoot>--}}
+                    <tbody>
+                        <tr>
+                            <td>Adea</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                        </tr>
+                        <tr>
+                            <td>Agil</td>
+                            <td>Accountant</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                            <td>2011/07/25</td>
+                        </tr>
+                        <tr>
+                            <td>Helmi</td>
+                            <td>Junior Technical Author</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                            <td>2009/01/12</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

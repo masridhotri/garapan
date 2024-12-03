@@ -15,5 +15,9 @@ Route::get('/login', function () {
 });
 
 Route::get('/coba', function () {
-    return view('main');
+    return view('master');
+});
+
+Route::get('/cobarekap', function () {
+    return view('rekap');
 });
