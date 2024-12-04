@@ -1,9 +1,5 @@
-<!-- Content Row -->
-
-<div class="row">
-
-    <!-- Area Chart -->
-    <div class="col-xl-8 col-lg-7">
+<!-- Area Chart -->
+    <div class="col-xl-10 col-lg-7">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div
@@ -27,7 +23,15 @@
             <!-- Card Body -->
             <div class="card-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                    <div class="chartjs-size-monitor">
+                        <div class="chartjs-size-monitor-expand">
+                            <div class></div>
+                        </div>
+                        <div class="chartjs-size-monitor-shrink">
+                            <div class></div>
+                        </div>
+                    </div>
+                    <canvas id="myAreaChart" width="600" height="320" style="display: block; width: 600px; height: 320px;" class="chartjs-rendor-monitor"></canvas>
                 </div>
             </div>
         </div>

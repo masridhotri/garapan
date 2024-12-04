@@ -14,10 +14,11 @@
     @include('kerangka.style')
 </head>
 
-<body class="bg-gradient-info justify-content:center">
-    <br>
+<body id="page-top">
+@include('sidebar.ss')
+@include('kerangka.nav')
 <!-- col-lg-5 -->
-<div class="col-5 mb-3">
+<div class="col-10 mb-0 align-items-center justify-content-center">
     <!-- card -->
     <div class="card shadow">
         <!-- card-body -->
@@ -51,7 +52,11 @@
 </div>
 <!-- end col-lg-5 -->
 
+<br>
+
 @include('kerangka.statistik')
+
+@include('kerangka.footer')
 
 @include('kerangka.script')
 </body>

@@ -23,14 +23,14 @@
     <!-- Head -->
     <div class="head text-center">
         <img src="/tamplate/assets/img/Logo-RSUD.png" width="150">
-        <h2 class="text-white">SISTEM INFORMASI BUKU TAMU <br> RSUD dr. DARSONO PACITAN</h2>
+        <h2 class="text-white"><b>SISTEM INFORMASI BUKU TAMU  RSUD dr. DARSONO PACITAN<b></h2>
     </div>
     <!-- end Head -->
 
     <!-- awal row -->
-    <div class="row mt-2">
+    <div class="row mt-2 align-items-center justify-content-center">
         <!-- col-lg-7 -->
-        <div class="col-7 mb-3">
+        <div class="col-9 mb-2">
             <div class="card shadow bg-gradient-light">
                 <!-- card-body -->
                 <div class="card-body">
@@ -61,9 +61,7 @@
                                 
                                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Simpan
-                                </a>
-                                <button class="btn btn-primary btn-user btn-block">Cek Riwayat Kunjungan</button>
-                                
+                                </a>                                
                             </form>
                             <hr>
                             <div class="text-center">
@@ -77,7 +75,7 @@
         </div>
         <!-- end col-lg-7 -->
 
-        <!-- col-lg-5 -->
+        {{-- <!-- col-lg-5 -->
         <div class="col-5 mb-3">
             <!-- card -->
             <div class="card shadow">
@@ -110,63 +108,9 @@
                 </div>
             </div>
         </div>
-        <!-- end col-lg-5 -->
+        <!-- end col-lg-5 --> --}}
     </div>
     <!-- end row -->
-
-    <!-- card -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary text-center">Data Kunjungan</h6>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                        </tr>
-                    </thead>
-                    {{--<tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                        </tr>
-                    </tfoot>--}}
-                    <tbody>
-                        <tr>
-                            <td>Adea</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                        </tr>
-                        <tr>
-                            <td>Agil</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                        </tr>
-                        <tr>
-                            <td>Helmi</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 
 
     @include('kerangka.script')

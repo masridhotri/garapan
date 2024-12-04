@@ -5,7 +5,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center">
             <div class="sidebar-brand-text">RSUD dr. DARSONO</div>
         </a>
 
@@ -14,7 +14,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/coba"> 
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Home Page</span></a>
         </li>
@@ -29,7 +29,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="/cobarekap">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Statistik Kunjungan</span>
             </a>
@@ -37,7 +37,7 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="/cihuy">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Riwayat Kunjungan</span>
             </a>
