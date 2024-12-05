@@ -59,7 +59,8 @@
                                 </div>
 
                                 
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a href="login.html" class="btn btn-primary btn-user btn-block" onclick="openPopup()"
+                                    >
                                     Simpan
                                 </a>                                
                             </form>

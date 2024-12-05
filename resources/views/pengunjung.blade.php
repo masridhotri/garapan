@@ -24,43 +24,24 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
+                            <th>No</th>
+                            <th>Nama Pengunjung</th>
+                            <th>Asal Instansi</th>
+                            <th>Alamat</th>
+                            <th>No HP</th>
+                            <th>Keperluan Berkunjung</th>
+                            <th>Tanggal</th>
                         </tr>
                     </thead>
-                    <!--<tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                        </tr>
-                    </tfoot>-->
                     <tbody>
                         <tr>
-                            <td>Adea</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                        </tr>
-                        <tr>
-                            <td>Agil</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                        </tr>
-                        <tr>
-                            <td>Helmi</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
+                            <td>1</td>
+                            <td>Kuntum</td>
+                            <td>apa aja deh</td>
+                            <td>Pacitan pride</td>
+                            <td>8723425</td>
+                            <td>gabut</td>
+                            <td>2024/12/05</td>
                         </tr>
                     </tbody>
                 </table>
