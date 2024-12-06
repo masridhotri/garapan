@@ -34,15 +34,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($data as $row)
                         <tr>
-                            <td>1</td>
-                            <td>Kuntum</td>
-                            <td>apa aja deh</td>
-                            <td>Pacitan pride</td>
-                            <td>8723425</td>
-                            <td>gabut</td>
-                            <td>2024/12/05</td>
+                            <th scope="row">{{ $row->id }}</th>
+                            <td>{{ $row->nama }}</td>
+                            <td>{{ $row->instansi }}</td>
+                            <td>{{ $row->alamat }}</td>
+                            <td>0{{ $row->nope }}</td>
+                            <td>{{ $row->keperluan }}</td>
+                            <td>{{ $row->tanggal }}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

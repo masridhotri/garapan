@@ -33,8 +33,10 @@
         <div class="col-9 mb-2">
             <div class="card shadow bg-gradient-light">
                 <!-- card-body -->
-                <div class="card-body">
-                <!-- <div class="p-5"> -->
+                <div class="card-body" action="/tambahdata" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <!-- <div class="p-5"> -->
+                    {{-- <form class="card-body" action="/simpan" method="POST" enctype="multipart/form-data"> --}}
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Identitas Pengunjung</h1>
                             </div>
@@ -49,27 +51,26 @@
                                     <input type="text" class="form-control form-control-user" name="alamat" placeholder="Alamat"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="kontak" placeholder="No. HP"></input>
+                                    <input type="number" class="form-control form-control-user" name="kontak" placeholder="No. HP"></input>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="tujuan" placeholder="Keperluan Berkunjung"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="date" class="form-control form-control-user" name="tanggal" placeholder="Tanggal Kunjungan"></input>
+                                    <input type="datetime-local" class="form-control form-control-user" name="tanggal" placeholder="Tanggal Kunjungan"></input>
                                 </div>
 
                                 
-                                <a href="login.html" class="btn btn-primary btn-user btn-block" onclick="openPopup()"
-                                    >
+                                <button type="submit" class="btn btn-primary btn-user btn-block"> {{--onclick="openPopup()" --}}
                                     Simpan
-                                </a>                                
+                                </button>                                
                             </form>
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="#">By MAGANG SIMRS Kuntum Khairunnesa | 2024 - <?=date('Y')?></a>
                             </div>
-                            
-                        <!-- </div> -->
+                         <!-- </div> -->
+                    {{-- </form>     --}}
                 </div>
                 <!-- end card-body -->
             </div>
