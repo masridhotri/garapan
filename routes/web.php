@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 Route::get('/cihuy', [TamuController::class, 'index'])->name('pengunjung');
 Route::get('/', [TamuController::class, 'tamu'])->name('home');
-Route::post('/tambahdata', [TamuController::class, 'tambahdata'])->name('tambahdata');
+Route::post('/insertdata', [TamuController::class, 'insertdata'])->name('insertdata');
 
 Route::get('/login', function () {
     return view('login');
@@ -29,3 +29,6 @@ Route::get('/cobarekap', function () {
 //     return view('pengunjung');
 // });
 
+Route::get('/popup', function () {
+    return view('popup');
+});

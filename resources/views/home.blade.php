@@ -33,31 +33,31 @@
         <div class="col-9 mb-2">
             <div class="card shadow bg-gradient-light">
                 <!-- card-body -->
-                <div class="card-body" action="/tambahdata" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <!-- <div class="p-5"> -->
-                    {{-- <form class="card-body" action="/simpan" method="POST" enctype="multipart/form-data"> --}}
+                <div class="card-body">
+                        <!-- <div class="p-5"> -->
+                     {{-- <form class="card-body" action="/simpan" method="POST" enctype="multipart/form-data"> --}}
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Identitas Pengunjung</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" class="card-body" action="/insertdata" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="nama" placeholder="Nama Pengunjung"></input>
+                                    <input type="text" name="nama" class="form-control form-control-user" placeholder="Nama Pengunjung"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="instansi" placeholder="Asal Instansi"></input>
+                                    <input type="text" name="instansi" class="form-control form-control-user" placeholder="Asal Instansi"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="alamat" placeholder="Alamat"></input>
+                                    <input type="text" name="alamat" class="form-control form-control-user" placeholder="Alamat"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-user" name="kontak" placeholder="No. HP"></input>
+                                    <input type="number" name="nope" class="form-control form-control-user" placeholder="No. HP"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="tujuan" placeholder="Keperluan Berkunjung"></input>
+                                    <input type="text" name="keperluan" class="form-control form-control-user" placeholder="Keperluan Berkunjung"></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="datetime-local" class="form-control form-control-user" name="tanggal" placeholder="Tanggal Kunjungan"></input>
+                                    <input type="date" name="tanggal" class="form-control form-control-user" placeholder="Tanggal Kunjungan"></input>
                                 </div>
 
                                 
@@ -65,11 +65,11 @@
                                     Simpan
                                 </button>                                
                             </form>
-                            <hr>
                             <div class="text-center">
                                 <a class="small" href="#">By MAGANG SIMRS Kuntum Khairunnesa | 2024 - <?=date('Y')?></a>
                             </div>
-                         <!-- </div> -->
+                    
+                    </div>        <!-- </div> -->
                     {{-- </form>     --}}
                 </div>
                 <!-- end card-body -->
