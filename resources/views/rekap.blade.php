@@ -54,7 +54,7 @@
 
 <br>
 
-@include('kerangka.statistik')
+{{-- @include('kerangka.statistik') --}}
 
 @include('kerangka.footer')
 

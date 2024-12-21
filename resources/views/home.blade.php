@@ -42,28 +42,29 @@
                             <form class="user" class="card-body" action="/insertdata" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" name="nama" class="form-control form-control-user" placeholder="Nama Pengunjung"></input>
+                                    <input type="text" name="nama" class="form-control form-control-user" placeholder="Nama Pengunjung" required></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="instansi" class="form-control form-control-user" placeholder="Asal Instansi"></input>
+                                    <input type="text" name="instansi" class="form-control form-control-user" placeholder="Asal Instansi" required></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="alamat" class="form-control form-control-user" placeholder="Alamat"></input>
+                                    <input type="text" name="alamat" class="form-control form-control-user" placeholder="Alamat" required></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" name="nope" class="form-control form-control-user" placeholder="No. HP"></input>
+                                    <input type="number" name="nope" class="form-control form-control-user" placeholder="No. HP" required></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="keperluan" class="form-control form-control-user" placeholder="Keperluan Berkunjung"></input>
+                                    <input type="text" name="keperluan" class="form-control form-control-user" placeholder="Keperluan Berkunjung" required></input>
                                 </div>
                                 <div class="form-group">
-                                    <input type="date" name="tanggal" class="form-control form-control-user" placeholder="Tanggal Kunjungan"></input>
+                                    <input type="date" name="tanggal" class="form-control form-control-user" placeholder="Tanggal Kunjungan" required></input>
                                 </div>
 
                                 
                                 <button type="submit" class="btn btn-primary btn-user btn-block"> {{--onclick="openPopup()" --}}
                                     Simpan
-                                </button>                                
+                                </button>
+                            
                             </form>
                             <div class="text-center">
                                 <a class="small" href="#">By MAGANG SIMRS Kuntum Khairunnesa | 2024 - <?=date('Y')?></a>
