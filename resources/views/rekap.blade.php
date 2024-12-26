@@ -26,20 +26,39 @@
             <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Statistik Pengunjung</h1>
             </div>
+            <?php
+                //deklarasi
+                $tgl_skrng = date('Y-m-d');
+
+                //tampil tgl kemarin
+                $kemarin = date('Y-m-d', strtotime('-1 day', strtotime(date('Y-m-d'))));
+
+                //mendapatkan 6 hari lalu
+                $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_skrng)));
+
+                //bulan
+                $sebulan = date('Y-m-d h:i:s', strtotime('-1 month +1 day', strtotime($tgl_skrng)));
+
+                $sekarang = date('Y-m-d h:i:s');
+
+                //query tampil jmlh data pengunjung
+                // $tgl_skrng = mysqli_fetch_array(mysqli_query($koneksi, "SELECT count (*) FROM tamus where tanggal like '%$tgl_skrng%'"));
+
+            ?>
             <table class="table table-bordered">
                 <tr>
                     <td>Hari Ini</td>
-                    <td>: 0</td>
+                    <td>: <?= $tgl_skrng[0]?></td>
                 </tr>
                 <br>
                 <tr>
                     <td>Minggu Ini</td>
-                    <td>: 0</td>
+                    <td>: <?= $seminggu[0]?></td>
                 </tr>
                 <br>
                 <tr>
                     <td>Bulan Ini</td>
-                    <td>: 0</td>
+                    <td>: <?= $sebulan[0]?></td>
                 </tr>
                 <br>
                 <tr>
@@ -49,10 +68,10 @@
             </table>
         </div>
     </div>
+    
 </div>
 <!-- end col-lg-5 -->
 
-<br>
 
 {{-- @include('kerangka.statistik') --}}
 

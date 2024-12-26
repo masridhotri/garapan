@@ -19,6 +19,6 @@ class TamuController extends Controller
     public function insertdata(Request $request){
         // dd($request->all());
         Tamu::create($request->all());
-        return redirect()->route('pengunjung');
+        return redirect()->route('home');
     }
 }

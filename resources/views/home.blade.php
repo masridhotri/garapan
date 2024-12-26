@@ -37,7 +37,7 @@
                         <!-- <div class="p-5"> -->
                      {{-- <form class="card-body" action="/simpan" method="POST" enctype="multipart/form-data"> --}}
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Identitas Pengunjung</h1>
+                                <h1 class="h5 text-gray-900 mb-4">Identitas Pengunjung</h1>
                             </div>
                             <form class="user" class="card-body" action="/insertdata" method="POST" enctype="multipart/form-data">
                                 @csrf
@@ -61,9 +61,15 @@
                                 </div>
 
                                 
-                                <button type="submit" class="btn btn-primary btn-user btn-block"> {{--onclick="openPopup()" --}}
+                                <button type="submit" class="btn btn-primary btn-user btn-block" > {{--onclick="openPopup()" --}}
                                     Simpan
                                 </button>
+                                {{-- @if ($simpan) {
+                                    echo "<script>alert('SUKSES!, Terimakasih telah berkunjung');
+                                        document.location='?'</script>";
+                                } --}}
+
+                            
                             
                             </form>
                             <div class="text-center">

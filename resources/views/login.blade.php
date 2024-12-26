@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Halaman Login | Buku Kunjungan Tamu RSUD dr. DARSONO PACITA</title>
+    <title>Login | Buku Kunjungan Tamu RSUD dr. DARSONO PACITA</title>
     <link rel="icon" href="tamplate/assets/img/Logo-RSUD.png" type="image/x-icon">
 
     @include('kerangka.style')
@@ -42,15 +42,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="/loginproses" method="POST">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="username" class="form-control form-control-user"
+                                            <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputUsername" aria-describedby="usernameHelp"
-                                                placeholder="Enter Your Username">
+                                                placeholder="Enter Your Email" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Enter Your Password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -59,14 +60,13 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a type="submit" class="btn btn-primary btn-user btn-block">Login</a>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="/regis">Register new account</a>
                                     </div>
                                 </div>
                             </div>

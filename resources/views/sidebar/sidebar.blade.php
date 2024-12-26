@@ -14,7 +14,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="/coba"> 
+            <a class="nav-link" href="/homepage"> 
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Home Page</span></a>
         </li>
@@ -29,7 +29,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/cobarekap">
+            <a class="nav-link collapsed" href="/statistikkunjungan">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Statistik Kunjungan</span>
             </a>
@@ -37,15 +37,11 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/cihuy">
+            <a class="nav-link collapsed" href="/riwayatkunjungan">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Riwayat Kunjungan</span>
             </a>
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>Setting</span>
-            </a>
+        
             {{--<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
