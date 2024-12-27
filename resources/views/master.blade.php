@@ -11,7 +11,7 @@
 
     <title>Sistem Informasi Kunjungan Tamu | RSUD dr DARSONO PACITAN</title>
     <link rel="icon" href="tamplate/assets/img/Logo-RSUD.png" type="image/x-icon">
-
+  
     @include('kerangka.style')
 
 </head>
@@ -123,7 +123,7 @@
                     </div>
 
         
-                    <div class="row">
+                    <div class="row col-15 mb-10">
                         @include('kerangka.statistik')
                     </div>
 
@@ -166,9 +166,10 @@
         </div>
     </div>
 
+    @include('kerangka.script')
+   
 
 </body>
 
-@include('kerangka.script')
 
 </html>

@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 
 
-Route::get('/riwayatkunjungan', [TamuController::class, 'index'])->name('pengunjung')->middleware('auth');
+Route::get('/riwayatkunjungan', [TamuController::class, 'index'])->name('pengunjung');
 
 Route::get('/', [TamuController::class, 'tamu'])->name('home');
 

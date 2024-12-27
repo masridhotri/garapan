@@ -14,6 +14,7 @@
 <!-- Page level custom scripts -->
 <script src="/tamplate/assets/js/demo/chart-area-demo.js"></script>
 
+
 <!-- Page level plugins -->
 <script src="/tamplate/assets/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="/tamplate/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
