@@ -11,7 +11,7 @@ class TamuController extends Controller
         $data = Tamu::all();
          return view('pengunjung', compact('data'));
     }
-
+   
     public function tamu(){
         return view('home');
     }

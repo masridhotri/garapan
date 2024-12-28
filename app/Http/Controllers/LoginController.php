@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function loginproses(Request $request){
         if(Auth::attempt($request->only('email','password'))){
-        return redirect('/homepage');
+        return redirect('/data');
         }
         return redirect('login');
     }

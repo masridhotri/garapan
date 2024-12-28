@@ -14,7 +14,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="/homepage">
+            <a class="nav-link" href="/home">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Home Page</span></a>
         </li>
@@ -29,7 +29,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/statistikkunjungan">
+            <a class="nav-link" href="{{route('showdata')}}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Statistik Kunjungan</span>
             </a>

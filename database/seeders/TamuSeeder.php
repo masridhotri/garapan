@@ -13,13 +13,104 @@ class TamuSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('tamus')->insert([
+       $data=[ [
             'nama' => 'Kuntum Khairunnesa',
             'instansi' => 'RSUD',
             'alamat' => 'Pacitan',
             'nope' => '083119457977',
             'keperluan' => 'Praktik Kerja Lapangan',
             'tanggal' => '2024/12/06',
-        ]);
+        ],
+    
+        [
+            'nama' => 'Kuntum',
+            'instansi' => 'smk',
+            'alamat' => 'kayen',
+            'nope' => '083119457977',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/07',
+        ],
+        [
+            'nama' => 'nesa',
+            'instansi' => 'smp',
+            'alamat' => 'jelok',
+            'nope' => '083119457977',
+            'keperluan' => 'rapat',
+            'tanggal' => '2024/12/08',
+        ],
+        [
+            'nama' => 'kuntumnesa',
+            'instansi' => 'sd',
+            'alamat' => 'sukoharjo',
+            'nope' => '083119457977',
+            'keperluan' => 'kunjungan dinas',
+            'tanggal' => '2024/12/09',
+        ],
+        [
+            'nama' => 'rasta',
+            'instansi' => 'RSUD',
+            'alamat' => 'bolosingo',
+            'nope' => '0123456789',
+            'keperluan' => 'main main',
+            'tanggal' => '2024/12/10',
+        ],
+        [
+            'nama' => 'deya',
+            'instansi' => 'RSUD',
+            'alamat' => 'tanjung',
+            'nope' => '09876543221',
+            'keperluan' => 'rapat',
+            'tanggal' => '2024/12/11',
+        ],
+        [
+            'nama' => 'lethek',
+            'instansi' => 'kjhfw',
+            'alamat' => 'jhiuhiwefga',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/12',
+        ],
+        [
+            'nama' => 'erin',
+            'instansi' => 'jkbkdfsg',
+            'alamat' => 'rebsfs',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/13',
+        ],
+        [
+            'nama' => 'agil',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/14',
+        ],
+        [
+            'nama' => 'kamto',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/15',
+        ],
+        [
+            'nama' => 'khairunnesa',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/16',
+        ],
+        [
+            'nama' => 'puan',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/12/17',
+        ]
+        ];
+        DB::table('tamus')->insert($data);
     }
 }

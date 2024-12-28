@@ -10,6 +10,8 @@
 
     <title>Statistik Kunjungan Tamu | RSUD dr DARSONO PACITAN</title>
     <link rel="icon" href="tamplate/assets/img/Logo-RSUD.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
 
     @include('kerangka.style')
 </head>
@@ -24,52 +26,37 @@
         <!-- card-body -->
         <div class="card-body">
             <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Statistik Pengunjung</h1>
+                <h1 class="h4 text-gray-900 mb-4">Data Jumlah Pengunjung</h1>
             </div>
-            <?php
-                //deklarasi
-                $tgl_skrng = date('Y-m-d');
-
-                //tampil tgl kemarin
-                $kemarin = date('Y-m-d', strtotime('-1 day', strtotime(date('Y-m-d'))));
-
-                //mendapatkan 6 hari lalu
-                $seminggu = date('Y-m-d h:i:s', strtotime('-1 week +1 day', strtotime($tgl_skrng)));
-
-                //bulan
-                $sebulan = date('Y-m-d h:i:s', strtotime('-1 month +1 day', strtotime($tgl_skrng)));
-
-                $sekarang = date('Y-m-d h:i:s');
-
-                //query tampil jmlh data pengunjung
-                // $tgl_skrng = mysqli_fetch_array(mysqli_query($koneksi, "SELECT count (*) FROM tamus where tanggal like '%$tgl_skrng%'"));
-
-            ?>
+          
             <table class="table table-bordered">
                 <tr>
                     <td>Hari Ini</td>
-                    <td>: <?= $tgl_skrng[0]?></td>
+                    <td>: {{$hari }}  </td>
                 </tr>
                 <br>
                 <tr>
                     <td>Minggu Ini</td>
-                    <td>: <?= $seminggu[0]?></td>
+                    <td>: {{$minggu}} </td>
                 </tr>
                 <br>
                 <tr>
                     <td>Bulan Ini</td>
-                    <td>: <?= $sebulan[0]?></td>
+                    <td>: {{$bulan}} </td>
                 </tr>
                 <br>
                 <tr>
+                  
                     <td>Keseluruhan</td>
-                    <td>: 0</td>
+                    <td><p> : {{$tamu}} data </p></td>
                 </tr>
             </table>
         </div>
     </div>
     
 </div>
+
+
 <!-- end col-lg-5 -->
 
 
@@ -78,5 +65,12 @@
 @include('kerangka.footer')
 
 @include('kerangka.script')
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+     <script>
+      $('#example').DataTable();    
+     </script>
 </body>
 </html>
