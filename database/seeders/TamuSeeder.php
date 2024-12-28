@@ -109,6 +109,46 @@ class TamuSeeder extends Seeder
             'nope' => '076456395535',
             'keperluan' => 'visit',
             'tanggal' => '2024/12/17',
+        ],
+        [
+            'nama' => 'jefri',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/06/17',
+        ],
+        [
+            'nama' => 'inka',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/01/17',
+        ],
+        [
+            'nama' => 'annisa',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/01/17',
+        ],
+        [
+            'nama' => 'nur',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/04/17',
+        ],
+        [
+            'nama' => 'hidayah',
+            'instansi' => 'jbyfk',
+            'alamat' => 'tdkuhvgi',
+            'nope' => '076456395535',
+            'keperluan' => 'visit',
+            'tanggal' => '2024/05/17',
         ]
         ];
         DB::table('tamus')->insert($data);

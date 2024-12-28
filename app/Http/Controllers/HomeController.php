@@ -9,36 +9,35 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index(){    
+    public function index()
+    {
         $tamus = Tamu::count();
         $haris = Tamu::whereDate('tanggal', Carbon::today())->count();
         $minggus = Tamu::whereBetween('tanggal', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
         $bulans = Tamu::whereMonth('tanggal', Carbon::now()->month)
-        ->whereYear('tanggal', Carbon::now()->year)
-        ->count();
-         return view('pages.master', compact('tamus','haris','minggus','bulans'));
-       
+            ->whereYear('tanggal', Carbon::now()->year)
+            ->count();
+        return view('pages.master', compact('tamus', 'haris', 'minggus', 'bulans'));
     }
-     public function getChartData()
+    public function getChartData()
     {
         // Assuming you have a 'visits' table with 'month' and 'visitor_count' columns
-        $data = Tamu::selectRaw('MONTH(created_at) as month, COUNT(*) as visitor_count')
+        $data = DB::table('tamus') // Ganti dengan nama tabel Anda
+            ->select(DB::raw('MONTH(tanggal) as month'), DB::raw('COUNT(*) as total'))
             ->groupBy('month')
-            ->orderBy('month')
             ->get();
 
-        // Format the data into an array of months and visitor counts
-        $months = [];
-        $visitorCounts = [];
-        
-        foreach ($data as $entry) {
-            $months[] = $entry->month;
-            $visitorCounts[] = $entry->visitor_count;
+        // Membuat array untuk bulan dan jumlah data
+        $months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        $visitorCounts = array_fill(0, 12, 0); // Awalnya set semua bulan ke 0
+
+        foreach ($data as $row) {
+            $visitorCounts[$row->month - 1] = $row->total; // Isi jumlah data per bulan
         }
 
         return response()->json([
             'months' => $months,
-            'visitor_counts' => $visitorCounts,
+            'visitor_counts' => $visitorCounts
         ]);
     }
 }
