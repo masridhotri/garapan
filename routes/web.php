@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TamuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StatisController;
-use App\Http\Controllers\statistikController;
 use Illuminate\Http\Request;
 
 
@@ -15,28 +14,28 @@ use Illuminate\Http\Request;
 
 
 
-Route::get('/riwayatkunjungan', [TamuController::class, 'index'])->name('pengunjung');
+
 
 Route::get('/', [TamuController::class, 'tamu'])->name('home');
+Route::post('/insertdata', [TamuController::class, 'insertdata'])->name('insertdata');
+
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
-
-
 Route::get('/regis', [LoginController::class, 'regis'])->name('regis');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('regisuser');
 
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::post('/insertdata', [TamuController::class, 'insertdata'])->name('insertdata');
+Route::middleware(['auth'])->group(function () {
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('/home', [HomeController::class, 'index'])->name('homes');
+    Route::get('/riwayatkunjungan', [TamuController::class, 'index'])->name('pengunjung');
+    Route::get('/Statis', [StatisController::class, 'index'])->name('showdata');
+    Route::get('/home/chart-data', [HomeController::class, 'getChartData'])->name('getChartData');
+});
 
-Route::get('/Statis', [StatisController::class,'index'])->name('showdata');
-Route::get('/home', [HomeController::class,'index'])->name('home');
-Route::get('/home/chart-data', [HomeController::class, 'getChartData'])->name('getChartData');
+
 
 
 

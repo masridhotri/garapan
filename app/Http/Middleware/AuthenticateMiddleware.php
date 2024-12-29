@@ -20,7 +20,7 @@ class AuthenticateMiddleware
     {
         if (Auth::check()) {
             return redirect('/dashboard');
-        }
+        }   
 
         // Jika belum login, izinkan ke halaman login
         return $next($request);
